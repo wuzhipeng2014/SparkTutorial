@@ -1,0 +1,11 @@
+
+将删除 .gitignore
+将删除 .idea/
+将删除 Projects.iml
+将删除 spark-warehouse/
+将删除 src/test/
+将删除 target/
+
+.idea/*
+target/*
+Projects.iml
