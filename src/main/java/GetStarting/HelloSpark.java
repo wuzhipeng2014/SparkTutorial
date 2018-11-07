@@ -19,7 +19,7 @@ public class HelloSpark {
         SparkSession spark = SparkSession.builder().master("local").appName("Simple Application").getOrCreate();
         Dataset<String> logData = spark.read().textFile(logFile).cache();
 
-
+        System.out.println(logFile.toString());
 
         spark.stop();
     }

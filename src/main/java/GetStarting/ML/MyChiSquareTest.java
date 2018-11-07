@@ -1,7 +1,7 @@
 package GetStarting.ML;
 import org.apache.spark.ml.linalg.VectorUDT;
 import org.apache.spark.ml.linalg.Vectors;
-import org.apache.spark.ml.stat.ChiSquareTest;
+//import org.apache.spark.ml.stat.ChiSquareTest;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.RowFactory;
@@ -36,10 +36,10 @@ public class MyChiSquareTest {
         SparkSession spark = SparkSession.builder().master("local").appName("Simple Application").getOrCreate();
 
         Dataset<Row> df = spark.createDataFrame(data, schema);
-        Row r = ChiSquareTest.test(df, "features", "label").head();
-        System.out.println("pValues: " + r.get(0).toString());
-        System.out.println("degreesOfFreedom: " + r.getList(1).toString());
-        System.out.println("statistics: " + r.get(2).toString());
+//        Row r = ChiSquareTest.test(df, "features", "label").head();
+//        System.out.println("pValues: " + r.get(0).toString());
+//        System.out.println("degreesOfFreedom: " + r.getList(1).toString());
+//        System.out.println("statistics: " + r.get(2).toString());
 
 
 
