@@ -13,10 +13,13 @@ object test extends App {
     val distData = sc.parallelize(data)
     print(distData.first())
     // Load training data
+    //    val training = sc.textFile("src/main/resources/citys.txt")
     val training = sc.textFile("hdfs://localhost:9000/user/zhipengwu/zhipeng.wu/*.gz")
 
-    //    val examples= training.sample(false,1)
+
+//        val examples=training.sample(false, 1).collect
     val examples = training.takeSample(false, training.count().toInt)
+    sc.makeRDD(examples)
 
     examples.map(line => println(line))
 

@@ -10,11 +10,6 @@ import org.apache.spark.sql.SparkSession;
 public class HelloSpark {
 
     public static void main(String[] args) {
-
-
-
-
-
         String logFile = "src/main/resources/citys.txt"; // Should be some file on your system
         SparkSession spark = SparkSession.builder().master("local").appName("Simple Application").getOrCreate();
         Dataset<String> logData = spark.read().textFile(logFile).cache();

@@ -12,6 +12,7 @@
         <spark.version>2.1.0</spark.version>
         <hadoop.version>2.2.0</hadoop.version>
         <scala.version>2.10.4</scala.version>
+        <xgboost.version>0.7</xgboost.version>
     </properties>
 
     <dependencies>
@@ -33,6 +34,13 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-mllib_2.11</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+
+        <!--spark xgboost-->
+        <dependency>
+            <groupId>ml.dmlc</groupId>
+            <artifactId>xgboost4j-spark</artifactId>
+            <version>${xgboost.version}</version>
         </dependency>
 
         <!--spark中访问hdfs-->
